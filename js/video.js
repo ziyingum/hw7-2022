@@ -39,11 +39,11 @@ document.querySelector('#mute').addEventListener('click', function (e) {
 		e.target.innerHTML = 'Mute';
 	}
 });
-
+document.querySelector('#volume').innerHTML = '100%';
 document.querySelector('#slider').addEventListener('change', function (e) {
 	const column = e.target.value;
 	video.volume = Number(column) / 100;
-	document.querySelector('#volume').innerHTML = column;
+	document.querySelector('#volume').innerHTML = column + '%';
 });
 
 document.querySelector('#vintage').addEventListener('click', function () {
